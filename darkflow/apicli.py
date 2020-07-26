@@ -2,10 +2,10 @@ from .defaults import argHandler #Import the default arguments
 import os
 from .net.build import TFNet
 
-def cliHandler(args):
+def cliHandlerApi(args):
     FLAGS = argHandler()
-    FLAGS.setDefaults()
-    FLAGS.parseArgs(args)
+    FLAGS.setApiDefaults()
+    # FLAGS.parseArgs(args)
 
     print('*** flags:', FLAGS)
 
