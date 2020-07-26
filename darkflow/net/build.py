@@ -12,14 +12,14 @@ import os
 class TFNet(object):
 
 	_TRAINER = dict({
-		'rmsprop': tf.train.RMSPropOptimizer,
-		'adadelta': tf.train.AdadeltaOptimizer,
-		'adagrad': tf.train.AdagradOptimizer,
-		'adagradDA': tf.train.AdagradDAOptimizer,
-		'momentum': tf.train.MomentumOptimizer,
-		'adam': tf.train.AdamOptimizer,
-		'ftrl': tf.train.FtrlOptimizer,
-		'sgd': tf.train.GradientDescentOptimizer
+		'rmsprop': tf.compat.v1.train.RMSPropOptimizer,
+		'adadelta': tf.compat.v1.train.AdadeltaOptimizer,
+		'adagrad': tf.compat.v1.train.AdagradOptimizer,
+		'adagradDA': tf.compat.v1.train.AdagradDAOptimizer,
+		'momentum': tf.compat.v1.train.MomentumOptimizer,
+		'adam': tf.compat.v1.train.AdamOptimizer,
+		'ftrl': tf.compat.v1.train.FtrlOptimizer,
+		'sgd': tf.compat.v1.train.GradientDescentOptimizer
 	})
 
 	# imported methods
@@ -102,7 +102,7 @@ class TFNet(object):
 
 		# Placeholders
 		inp_size = [None] + self.meta['inp_size']
-		self.inp = tf.placeholder(tf.float32, inp_size, 'input')
+		self.inp = tf.compat.v1.placeholder(tf.float32, inp_size, 'input')
 		self.feed = dict() # other placeholders
 
 		# Build the forward pass
@@ -142,11 +142,11 @@ class TFNet(object):
 			self.summary_op = tf.summary.merge_all()
 			self.writer = tf.summary.FileWriter(self.FLAGS.summary + 'train')
 		
-		self.sess = tf.Session(config = tf.ConfigProto(**cfg))
-		self.sess.run(tf.global_variables_initializer())
+		self.sess = tf.compat.v1.Session(config = tf.compat.v1.ConfigProto(**cfg))
+		self.sess.run(tf.compat.v1.global_variables_initializer())
 
 		if not self.ntrain: return
-		self.saver = tf.train.Saver(tf.global_variables(), 
+		self.saver = tf.compat.v1.train.Saver(tf.compat.v1.global_variables(), 
 			max_to_keep = self.FLAGS.keep)
 		if self.FLAGS.load != 0: self.load_from_ckpt()
 		

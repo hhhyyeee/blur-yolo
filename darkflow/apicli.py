@@ -2,12 +2,12 @@ from .defaults import argHandler #Import the default arguments
 import os
 from .net.build import TFNet
 
-def cliHandlerApi(args):
+def cliHandlerApi():
     FLAGS = argHandler()
     FLAGS.setApiDefaults()
     # FLAGS.parseArgs(args)
 
-    print('*** flags:', FLAGS)
+    print('*** apicli flags:', FLAGS)
 
     # make sure all necessary dirs exist (블러 디렉토리도 만들기!)
     def _get_dir(dirs):

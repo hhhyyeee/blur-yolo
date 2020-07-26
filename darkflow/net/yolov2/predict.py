@@ -79,7 +79,7 @@ def postprocess(self, net_out, im, save = True):
 		textFile = os.path.splitext(img_name)[0] + ".json"
 		with open(textFile, 'w') as f:
 			f.write(textJSON)
-		return		
+		return
 	
 	cv2.imwrite(img_name, imgcv)
 

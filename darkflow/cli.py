@@ -7,7 +7,7 @@ def cliHandler(args):
     FLAGS.setDefaults()
     FLAGS.parseArgs(args)
 
-    print('*** flags:', FLAGS)
+    print('*** cli flags:', FLAGS)
 
     # make sure all necessary dirs exist (블러 디렉토리도 만들기!)
     def _get_dir(dirs):

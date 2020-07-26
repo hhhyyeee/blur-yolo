@@ -18,7 +18,7 @@ def read_item(item_id: int, q: Optional[str] = None):
 
 
 @app.post("/yolo")
-async def create_upload_file(file: UploadFile = File(...)): 
+async def create_upload_file(file: UploadFile = File(...)):
     # 받은 파일을 새이름의 파일로 저장
     filename = shortuuid.uuid() + ".png"
     saveFile = open('./api/images/' + filename, 'wb+')
@@ -26,6 +26,7 @@ async def create_upload_file(file: UploadFile = File(...)):
     saveFile.close()
 
     # 파라미터 핸들링 어케하냐
-    cliHandlerApi(3)
+    cliHandlerApi()
+    returnFile = open('./api/images/blur/' + filename, 'r')
 
-    return file.filename
+    return returnFile

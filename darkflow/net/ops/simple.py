@@ -103,7 +103,7 @@ class crop(BaseOp):
 
 class maxpool(BaseOp):
 	def forward(self):
-		self.out = tf.nn.max_pool(
+		self.out = tf.nn.max_pool2d(
 			self.inp.out, padding = 'SAME',
 	        ksize = [1] + [self.lay.ksize]*2 + [1], 
 	        strides = [1] + [self.lay.stride]*2 + [1],
