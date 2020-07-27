@@ -96,7 +96,7 @@ class argHandler(dict):
             i += 1
     
     def setApiDefaults(self):
-        self.define('imgdir', './api/images/', 'path to testing directory with images')
+        self.define('imgdir', './api/', 'path to testing directory with images')
         self.define('binary', './bin/', 'path to .weights directory')
         self.define('config', './cfg/', 'path to .cfg directory')
         self.define('dataset', '../pascal/VOCdevkit/IMG/', 'path to dataset directory')

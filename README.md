@@ -4,8 +4,8 @@
 * Opencv for Python
 
 ### How to setup
-1. Make /api/images directory
-2. pip install .
+1. pip install .
+2. Make /api directory
 3. Run `uvicorn main:app --reload`
 
 ### Outline
