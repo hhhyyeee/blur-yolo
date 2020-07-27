@@ -86,11 +86,17 @@ def postprocess(self, net_out, im, save = True):
 	# 블러 처리
 	print('max confidence result:', resultsForBlur)
 	blurred_img = cv2.GaussianBlur(imgcv_blur, (21, 21), 0)
-
 	mask = np.zeros((h, w, 3), dtype=np.uint8)
+
+	if len(resultsForBlur) is 0: # 오브젝트가 없을 경우
+		print('!!! Exception !!!')
+		return
+
 	mask = cv2.rectangle(mask, (resultsForBlur[2], resultsForBlur[3]), (resultsForBlur[4], resultsForBlur[5]), (255, 255, 255), -1)
 	out = np.where(mask==(255, 255, 255), imgcv_blur, blurred_img)
 
 	blurfolder = os.path.join(self.FLAGS.imgdir, 'blur')
 	blurred_img_name = os.path.join(blurfolder, os.path.basename(im))
 	cv2.imwrite(blurred_img_name, out)
+
+	return

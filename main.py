@@ -1,5 +1,6 @@
 from typing import Optional
 from fastapi import FastAPI, File, UploadFile
+from fastapi.responses import FileResponse
 import shortuuid
 import sys
 import shutil
@@ -25,8 +26,6 @@ async def create_upload_file(file: UploadFile = File(...)):
     shutil.copyfileobj(file.file, saveFile)
     saveFile.close()
 
-    # 파라미터 핸들링 어케하냐
     cliHandlerApi()
-    returnFile = open('./api/images/blur/' + filename, 'r')
 
-    return returnFile
+    return FileResponse('./api/images/blur/' + filename)

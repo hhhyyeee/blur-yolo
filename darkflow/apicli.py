@@ -1,5 +1,6 @@
 from .defaults import argHandler #Import the default arguments
 import os
+import shutil
 from .net.build import TFNet
 
 def cliHandlerApi():
@@ -14,7 +15,6 @@ def cliHandlerApi():
         for d in dirs:
             this = os.path.abspath(os.path.join(os.path.curdir, d))
             if not os.path.exists(this): os.makedirs(this)
-    
     requiredDirectories = [FLAGS.imgdir, FLAGS.binary, FLAGS.backup, os.path.join(FLAGS.imgdir,'out'), os.path.join(FLAGS.imgdir,'blur')]
     if FLAGS.summary:
         requiredDirectories.append(FLAGS.summary)
