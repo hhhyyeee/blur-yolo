@@ -22,3 +22,6 @@
 
 #### 27/07/20
 * Using `yolov2-tiny-voc.cfg`, `yolov2-tiny-voc.weights`. Takes 9.21seconds.
+
+#### 05/08/20
+* Wrote Requirements.txt file
