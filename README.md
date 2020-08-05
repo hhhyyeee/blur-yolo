@@ -2,9 +2,10 @@
 
 * Darkflow https://github.com/thtrieu/darkflow
 * Opencv for Python
+* Fastapi for Python https://fastapi.tiangolo.com/
 
 ### How to setup
-1. pip install .
+1. `python3 setup.py build_ext --inplace`
 2. Make /api directory
 3. Run `uvicorn main:app --reload`
 

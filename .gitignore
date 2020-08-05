@@ -1,8 +1,15 @@
-/api/images
+/.vscode
+/api
 /bin
 /build
 /cfg
 /ckpt
+/darkflow/__pycache__
+/darkflow/cython_utils
+/darkflow/dark
+/darkflow/utils
+/darkflow.egg-info
+/env
 /hyewon_sample
 /sample_img
 /test

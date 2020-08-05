@@ -24,8 +24,9 @@ def cliHandlerApi():
 
     # 입력 이미지 original 디렉토리에 복사
     for root, dirs, files in os.walk(FLAGS.imgdir, topdown=True):
+        print("#")
         for img in files:
-            # print(img)
+            print("*")
             try:
                 shutil.copy(os.path.join(FLAGS.imgdir, img), os.path.join(FLAGS.imgdir, 'original'))
             except:
