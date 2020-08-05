@@ -5,9 +5,10 @@
 * Fastapi for Python https://fastapi.tiangolo.com/
 
 ### How to setup
-1. `python3 setup.py build_ext --inplace`
-2. Make /api directory
-3. Run `uvicorn main:app --reload`
+1. Run `pip3 install -r requirements.txt`
+2. `python3 setup.py build_ext --inplace`
+3. Make `/api` directory
+4. Run `uvicorn main:app --reload`
 
 ### Outline
 * FastAPI based Web API which outfocuses the given picture.
