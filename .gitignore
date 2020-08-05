@@ -1,8 +1,6 @@
 /.vscode
 /api
-/bin
 /build
-/cfg
 /ckpt
 /darkflow/__pycache__
 /darkflow/cython_utils
@@ -17,5 +15,4 @@
 .DS_Store
 demo.gif
 flow
-labels.txt
 preview.png

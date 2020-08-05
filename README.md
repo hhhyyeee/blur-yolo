@@ -5,6 +5,8 @@
 * Fastapi for Python https://fastapi.tiangolo.com/
 
 ### How to setup
+1. Download appropriate weight and configuration files for YOLO (https://pjreddie.com/darknet/yolo/)
+2. Save cfg file in `./cfg`, weight file in `./bin`
 1. Run `pip3 install -r requirements.txt`
 2. `python3 setup.py build_ext --inplace`
 3. Make `/api` directory
