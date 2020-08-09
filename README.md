@@ -14,7 +14,7 @@
 ### Outline
 * FastAPI based Web API which outfocuses the given picture.
 * Yolo detects the objects from the picture and determines the prominent one.
-* Blur out the rest of the picture using OpenCV.
+* Blur out the rest of the picture using OpenCV and save it in `/api` directory.
 
 ### Getting better...
 #### 26/07/20
@@ -24,4 +24,4 @@
 * Using `yolov2-tiny-voc.cfg`, `yolov2-tiny-voc.weights`. Takes 9.21seconds.
 
 #### 05/08/20
-* Wrote Requirements.txt file
+* Wrote `Requirements.txt` file

@@ -88,7 +88,7 @@ def postprocess(self, net_out, im, save = True):
 	blurred_img = cv2.GaussianBlur(imgcv_blur, (21, 21), 0)
 	mask = np.zeros((h, w, 3), dtype=np.uint8)
 
-	if len(resultsForBlur) is 0: # 오브젝트가 없을 경우
+	if len(resultsForBlur) == 0: # 오브젝트가 없을 경우
 		print('!!! Exception !!!')
 		return
 
