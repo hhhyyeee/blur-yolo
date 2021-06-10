@@ -11,7 +11,7 @@ click==7.1.2
 Cython==0.29.21
 dnspython==2.0.0
 email-validator==1.1.1
-fastapi==0.60.1
+fastapi==0.65.2
 gast==0.3.3
 google-pasta==0.2.0
 graphene==2.1.8
